@@ -45,7 +45,7 @@ function App() {
         setState(prevState => {
           if (prevState.appPeriodState === applicationPeriodStates.SESSION) {
             const remTime = prevState.sessionRemTime - 1;
-            if (remTime > 0) {
+            if (remTime >= 0) {
               return {
                 ...prevState,
                 sessionRemTime: remTime,
@@ -59,7 +59,7 @@ function App() {
             }
           } else {
             const remTime = prevState.breakRemTime - 1;
-            if (remTime > 0) {
+            if (remTime >= 0) {
               return {
                 ...prevState,
                 breakRemTime: remTime,
@@ -153,9 +153,7 @@ function App() {
             </Heading>
             <Box boxShadow="lg">
               <VStack>
-                <Text>
-                  {state.getVal().min}:{state.getVal().sec}
-                </Text>
+                <Text id="time-left">{state.getVal().min + ':' + state.getVal().sec}</Text>
                 <HStack>
                   <PlayPauseButton
                     id="start_stop"
@@ -166,9 +164,6 @@ function App() {
                 </HStack>
               </VStack>
             </Box>
-            {/* <Heading size="md" as="h5">
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Heading> */}
           </VStack>
         </Grid>
       </Box>

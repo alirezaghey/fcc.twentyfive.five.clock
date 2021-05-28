@@ -5,6 +5,7 @@ import { faRedo } from '@fortawesome/free-solid-svg-icons';
 const ResetButton = props => {
   return (
     <IconButton
+      id={props.id}
       onClick={props.handleClick}
       icon={<FontAwesomeIcon icon={faRedo} />}
     />

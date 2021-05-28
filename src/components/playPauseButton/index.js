@@ -5,6 +5,7 @@ import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 const PlayPauseButton = props => {
   return (
     <IconButton
+      id={props.id}
       icon={<FontAwesomeIcon onClick={props.handleClick} icon={props.play ? faPause : faPlay} />}
     />
   );
