@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/fcc.twentyfive.five.clock/static/js/main.5dc5fa58.chunk.js",
+    "main.js.map": "/fcc.twentyfive.five.clock/static/js/main.5dc5fa58.chunk.js.map",
+    "runtime-main.js": "/fcc.twentyfive.five.clock/static/js/runtime-main.beb1503e.js",
+    "runtime-main.js.map": "/fcc.twentyfive.five.clock/static/js/runtime-main.beb1503e.js.map",
+    "static/css/2.c03d4ae9.chunk.css": "/fcc.twentyfive.five.clock/static/css/2.c03d4ae9.chunk.css",
+    "static/js/2.6c5f738c.chunk.js": "/fcc.twentyfive.five.clock/static/js/2.6c5f738c.chunk.js",
+    "static/js/2.6c5f738c.chunk.js.map": "/fcc.twentyfive.five.clock/static/js/2.6c5f738c.chunk.js.map",
+    "index.html": "/fcc.twentyfive.five.clock/index.html",
+    "static/css/2.c03d4ae9.chunk.css.map": "/fcc.twentyfive.five.clock/static/css/2.c03d4ae9.chunk.css.map",
+    "static/js/2.6c5f738c.chunk.js.LICENSE.txt": "/fcc.twentyfive.five.clock/static/js/2.6c5f738c.chunk.js.LICENSE.txt",
+    "static/media/400.css": "/fcc.twentyfive.five.clock/static/media/xanh-mono-vietnamese-400-normal.7e1b7a64.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.beb1503e.js",
+    "static/css/2.c03d4ae9.chunk.css",
+    "static/js/2.6c5f738c.chunk.js",
+    "static/js/main.5dc5fa58.chunk.js"
+  ]
+}
