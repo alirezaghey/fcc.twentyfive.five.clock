@@ -1,13 +1,12 @@
 import { Heading, Button, Input, HStack, useNumberInput, VStack } from '@chakra-ui/react';
 
-import { applicationRunStates } from '../../App';
-
 const InputNumber = props => {
   const { getInputProps, getIncrementButtonProps, getDecrementButtonProps } = useNumberInput({
     step: 1,
     value: props.value,
     min: props.min,
     max: props.max,
+    isDisabled: props.disabled,
   });
 
   const inc = getIncrementButtonProps();
@@ -23,9 +22,7 @@ const InputNumber = props => {
         <Button
           {...inc}
           onClick={() => props.handleClick(props.type, 1)}
-          isDisabled={
-            props.value >= props.max || props.appRunState === applicationRunStates.RUNNING
-          }
+          // isDisabled={props.disabled}
           id={props.type + '-increment'}
         >
           +
@@ -40,9 +37,7 @@ const InputNumber = props => {
         <Button
           {...dec}
           onClick={() => props.handleClick(props.type, -1)}
-          isDisabled={
-            props.vlaue <= props.min || props.appRunState === applicationRunStates.RUNNING
-          }
+          // isDisabled={props.disabled}
           id={props.type + '-decrement'}
         >
           -

@@ -51,6 +51,8 @@ function App() {
                 sessionRemTime: remTime,
               };
             } else {
+              const audioEl = document.getElementById('beep');
+              audioEl.play();
               return {
                 ...prevState,
                 sessionRemTime: prevState.sessionTime,
@@ -65,6 +67,8 @@ function App() {
                 breakRemTime: remTime,
               };
             } else {
+              const audioEl = document.getElementById('beep');
+              audioEl.play();
               return {
                 ...prevState,
                 breakRemTime: prevState.breakTime,
@@ -88,6 +92,9 @@ function App() {
   };
 
   const handleResetClick = () => {
+    const audioEl = document.getElementById('beep');
+    audioEl.pause();
+    audioEl.currentTime = 0;
     setState(createState());
   };
 
@@ -128,6 +135,7 @@ function App() {
               <InputNumber
                 type="session"
                 value={state.sessionTime / 60}
+                disabled={state.appRunState === applicationRunStates.RUNNING}
                 appRunState={state.appRunState}
                 handleClick={handleIncDecClick}
                 id="session-label"
@@ -139,7 +147,7 @@ function App() {
               <InputNumber
                 type="break"
                 value={state.breakTime / 60}
-                appRunState={state.appRunState}
+                disabled={state.appRunState === applicationRunStates.RUNNING}
                 handleClick={handleIncDecClick}
                 id="break-label"
                 min={1}
@@ -162,6 +170,11 @@ function App() {
                   />
                   <ResetButton id="reset" handleClick={handleResetClick} />
                 </HStack>
+                <audio
+                  id="beep"
+                  preload="auto"
+                  src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"
+                />
               </VStack>
             </Box>
           </VStack>
