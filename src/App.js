@@ -93,8 +93,14 @@ function App() {
 
   const handleResetClick = () => {
     const audioEl = document.getElementById('beep');
-    audioEl.pause();
-    audioEl.currentTime = 0;
+    setTimeout(
+      audio => {
+        audio.pause();
+        audio.currentTime = 0;
+      },
+      150,
+      audioEl
+    );
     setState(createState());
   };
 
